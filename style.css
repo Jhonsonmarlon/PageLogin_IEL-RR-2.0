@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family= Kanit & display = swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,900;1,400;1,900&display=swap');
+
+/* <!-- Author: Jhonson Marlon --> */
+
+
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+*[hidden] {
+    display: none;
+}
+
+html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#right {
+    display: none;
+}
+
+
+body {
+    background-image: url(./assets/bg/cool-background2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #121111;
+}
+
+main, container, #login {
+    height: 100%;
+}
+
+/* -----------------------GERAL------------------------ */
+
+#login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ----------------------LADO ESQUERDO------------------- */
+
+#left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.logo_login {
+    padding-top: 50px;
+    width: 140px;
+    height: 70px;
+}
+
+.box_login {
+    width: 600px;
+    height: 370px;
+    background-color: #24221fb4;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+.content-box_login {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin: 50px;
+    align-items: center;
+
+}
+
+.titulo_boxgeral {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    content: fit-content;
+    margin: 0;
+}
+
+.titulo_box {
+    padding-left: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.titulo_box img {
+    margin: 0px;
+}
+
+
+.titulo_box h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 26px;
+    margin: 0px;
+    font-weight: normal;
+}
+
+.legenda_box {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 38px;
+}
+
+.legenda_box p {
+    font-family: 'Jost';
+    color: #c2c2c2;
+    font-size: small;
+}
+
+.todos_input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+form {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+div.input {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+input, select, option {
+    /* reset appeareance */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+
+
+    outline: none;
+
+    /* background-image: url(./assets/icons/user-icon.svg); */
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-position-y: -4px;
+
+}
+
+.input_login {
+    border: none;
+    border-bottom: 1px solid #8d8d8d;
+    background-color: transparent;
+    padding: 5px 55px 5px 5px;
+    color: #ffffff;
+}
+
+input~label, select~label {
+    position: absolute;
+    left: 0;
+    top: -8px;
+    transition: .5s;
+}
+
+
+input:focus~label, input:valid~label,
+select:focus~label, select:valid~label {
+    transform: translateY(-10px);
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+select {
+    width: 230px;
+    background-image: url(./assets/icons/mostrar_mais.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 10%;
+
+}
+
+option {
+    color: black;
+}
+
+
+.input_buttongeral {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input_button {
+    cursor: pointer;
+    font-family: 'Jost';
+    font-size: 16px;
+    color: #ffffff;
+    padding: 5px 30px;
+    border: unset;
+    border-radius: 3px;
+    background: #0464ac;
+    box-shadow: rgba(138, 138, 138, 0.3) 0px 19px 38px, rgba(98, 98, 98, 0.22) 0px 15px 12px;
+}
+
+.cadastre-se_button {
+    font-family: 'Jost';
+    color: #c2c2c2;
+    font-size: 11px;
+
+}
+
+.cadastre-se_button a {
+    color: #0464ac;
+}
+
+
+.direitos_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+    padding-bottom: 15px;
+    font-family: 'Jost';
+    font-size: 13px;
+}
+
+
+/* -----------------------LADO DIREITO------------------- */
+
+/* #right {
+    width: 200%;
+}
+
+#right img {
+    width: 100%;
+    height: 100%;
+} */
+
+/* -------------RESPONSIVIDADE---------- */
+
+@media (max-width: 500px) {
+
+    #left {
+        background-image: url(./assets/bg/cool-background.png);
+        background-repeat: repeat;
+        background-size: 125%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .box_login {
+        width: 200px;
+        height: 400px;
+
+    }
+
+    .legenda_box {
+        padding-left: 18px;
+    }
+
+
+    .todos_input {
+        flex-direction: column;
+    }
+
+    .input_login {
+        padding: 5px 10px 5px 5px;
+    }
+
+    select {
+        width: 190px;
+    }
+
+    .titulo_box h1 {
+        font-size: 15px;
+    }
+
+    .titulo_boxgeral p {
+        padding-left: 15px;
+        font-size: 11px;
+    }
+
+    .direitos_login {
+        margin-top: 10px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 630px) {
+
+    #left {
+        background-image: url(./assets/bg/cool-background.png);
+        background-repeat: repeat;
+        background-size: 125%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .logo_login {
+        padding-top: 25px;
+        width: 100px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .box_login {
+        width: 300px;
+        height: 450px;
+        margin: 0 20% 0 20%;
+    }
+
+    .legenda_box {
+        padding-left: 23px;
+    }
+
+    .content-box_login {
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin: 25px;
+
+    }
+
+    .input_login {
+        padding: 5px 20px 5px 5px;
+    }
+
+    select {
+        width: 200px;
+    }
+
+    .titulo_box h1 {
+        font-size: 20px;
+    }
+
+    .titulo_boxgeral p {
+        padding-left: 15px;
+        font-size: 11px;
+    }
+
+    .direitos_login {
+        margin-top: 10px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 830px) {
+
+
+    #left {
+        background-image: url(./assets/bg/cool-background.png);
+        background-repeat: no-repeat;
+        background-size: 125%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    #left {
+        background-image: url(./assets/bg/cool-background.png);
+        background-repeat: no-repeat;
+        background-size: 125%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    #left {
+        background-image: url(./assets/bg/cool-background.png);
+        background-repeat: no-repeat;
+        background-size: 125%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+}
